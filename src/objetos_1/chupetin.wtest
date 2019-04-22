@@ -1,0 +1,50 @@
+import golosinas.*
+import mariano.*
+
+describe "test de chupetin" {
+
+	test "peso inicial" {
+		assert.equals(7, chupetin.peso())
+	}
+	
+	test "precio" {
+		assert.equals(2, chupetin.precio())
+	}
+	
+	test "mordiscos" {
+		chupetin.mordisco()
+		assert.equals(6.3, chupetin.peso())
+		chupetin.mordisco()
+		assert.equals(5.6, chupetin.peso())
+		chupetin.mordisco()
+		assert.equals(5, chupetin.peso())
+		chupetin.mordisco()
+		assert.equals(4.5, chupetin.peso())
+		chupetin.mordisco()
+		assert.equals(4, chupetin.peso())
+		chupetin.mordisco()
+		assert.equals(3.6, chupetin.peso())
+		chupetin.mordisco()
+		assert.equals(3.2, chupetin.peso())
+		chupetin.mordisco()
+		assert.equals(2.8, chupetin.peso())
+		chupetin.mordisco()
+		assert.equals(2.5, chupetin.peso())
+		chupetin.mordisco()
+		assert.equals(2.2, chupetin.peso())
+		chupetin.mordisco()
+		assert.equals(1.9, chupetin.peso())
+		chupetin.mordisco()
+		assert.equals(1.9, chupetin.peso())
+		
+	}
+	
+	test "gusto" {
+		assert.equals("naranja", chupetin.gusto())
+	}
+	
+	test "libre de gluten" {
+		assert.equals(true,chupetin.libreGluten())	
+	}
+	
+}

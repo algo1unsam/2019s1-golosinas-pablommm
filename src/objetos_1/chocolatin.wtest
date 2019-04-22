@@ -1,0 +1,25 @@
+import golosinas.*
+import mariano.*
+
+describe "test de chocolatin" {
+	test "peso inicial" {
+		assert.equals(250, chocolatin.peso())
+	}	
+	test "precio" {
+		assert.equals(5, chocolatin.precio())
+	}	
+	test "mordiscos" {
+		chocolatin.mordisco()
+		assert.equals(125, chocolatin.peso())
+		chocolatin.mordisco()
+		assert.equals(62.5, chocolatin.peso())
+		chocolatin.mordisco()
+		assert.equals(15.6, chocolatin.peso())	
+	}	
+	test "gusto" {
+		assert.equals("vainilla", chocolatin.gusto())
+	}	
+	test "libre de gluten" {
+		assert.equals(false,chocolatin.libreGluten())	
+	}	
+}
