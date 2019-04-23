@@ -49,7 +49,7 @@ describe "tests de mariano" {
 		falta
 	}*/
 	test "sabores" {
-		assert.equals(["chocolate","frutilla"], mariano.sabores())
+		assert.equals(#{"chocolate","frutilla"}, mariano.sabores())
 	}
 	test "golosinaMasCara"{
 		assert.equals(chocolatin, mariano.golosinaMasCara())

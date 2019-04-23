@@ -26,8 +26,8 @@ object mariano {
 		return golosinas.filter{ golosina => golosina.gusto(saborr) }
 	}
 	method sabores(){
-		return golosinas.map{ golosina => (golosina.gusto()).asSet()
-		}
+		return golosinas.map{ golosina => (golosina.gusto())
+		}.asSet
 	}
 	method golosinaMasCara(){
 		return  golosinas.max{ golosina => golosina.precio() }
